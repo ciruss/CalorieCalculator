@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulaator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script> src="config.js"</script>
+</head>
+<body>
+    <div style="float: left; width: 50%;">
+    <input type="radio" id="HB" name="method"> Harris-Benedict’i võrrand <br>
+    <input type="radio" id="MS" name="method"> Mifflin-St.Jeor’i võrrand <br><br>
+    <label>Mees:
+        <input type="radio" id="male" name="gender"><br>
+    </label>
+    <label>Naine:
+        <input type="radio" id="female" name="gender"><br>
+    </label><br>
+    <label>Vanus: <br>
+        <input id="age" type="number"><br>
+    </label><br>
+        Kaal(kg): <br>
+        <input id="weight" type="number"><br><br>
+        Pikkus(cm): <br>
+        <input id="height" type="number"><br>
+        <p style="font-size:20px"><b>Aktiivsus aste:</b></p>
+        Istuvtöö, sporti ei tee: <br>
+        <input type="radio" id="op1" name="active"><br>
+        Vähe aktiivne: <br>
+        <input type="radio" id="op2" name="active"><br>
+        Aktiivne: <br>
+        <input type="radio" id="op3" name="active"><br>
+        Väga aktiivne: <br>
+        <input type="radio" id="op4" name="active"><br><br>
+        <button onclick="minCalories()">Arvuta</button>
+        <p id="dailyMin"></p>
+        <p>See on Teie minimaale päevane kalori vajadus</p>
+        <p>Nüüd saate arvutada oma päevase kaloraazi, vastavalt oma aktiivsus tasemele</p>
+        <button onclick="actCalories()">Arvuta</button>
+        <p id="actCalories"></p><br><br>
+        <button id="save" onclick="save">Salvesta</button>
+    </div><!-- 
+    <div style="float: left; width:50%;">
+        <button id="load" onclick="load">Lae andmed</button>
+        <table id="andmed">
+            <tr><td>Nimi</td><td>Vanus</td><td>Kaal</td><td>Baas kaloraaz</td><td>Vajalik kaloraaz</td><td>Kuupäev</td></tr>
+        </table>
+    </div> -->
+
+   <script src="calc.js" charset="UTF-8"></script>
+</body>
+</html>
